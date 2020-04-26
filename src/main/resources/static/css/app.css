@@ -1,0 +1,32 @@
+.content {
+	padding: 30px 20px;
+}
+
+.section {
+	margin-top: 30px;
+}
+
+.primenumber-error {
+	color: red;
+}
+
+.primenumber-result {
+	margin-top: 10px
+}
+
+.primenumber-actions {
+	margin-top: 10px;
+}
+
+.primenumber-data input {
+	width: 250px;
+}
+
+.primenumber-actions button {
+	margin-right: 10px;
+	border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    background-color: #ccc;
+    box-shadow: none;
+}
