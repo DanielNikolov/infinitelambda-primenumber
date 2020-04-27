@@ -21,7 +21,7 @@ const primeNumberCheckBtn = window.document.getElementById('primeNumberCheckBtn'
 primeNumberCheckBtn.addEventListener('click', function() {
 	const primeNumberInput = document.getElementById('primeNumberValue');
 	const primeNumberInt = parseInt(primeNumberInput.value)
-	if (!isNaN(primeNumberInt) && Number.isInteger(primeNumberInput.value) && primeNumberInt > 0) {
+	if (/^\d+$/.test(primeNumberInput.value) && !isNaN(primeNumberInt) && primeNumberInt >= 0) {
 		fetch('/api/primenumber/check?query=' + primeNumberInt)
 			.then(function(response) {
 				if (response.status !== 200) {
@@ -49,7 +49,7 @@ const primeNumberNextBtn = window.document.getElementById('primeNumberNextBtn');
 primeNumberNextBtn.addEventListener('click', function() {
 	const primeNumberInput = document.getElementById('primeNumberValue');
 	const primeNumberInt = parseInt(primeNumberInput.value)
-	if (/^\d+$/.test(primeNumberInput.value) && !isNaN(primeNumberInt) && primeNumberInt > 0) {
+	if (/^\d+$/.test(primeNumberInput.value) && !isNaN(primeNumberInt) && primeNumberInt >= 0) {
 		fetch('/api/primenumber/next?query=' + primeNumberInt)
 			.then(function(response) {
 				if (response.status !== 200) {
